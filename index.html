@@ -3,13 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invitación de Boda</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Invitación de Boda | Diego & Tania</title>
+  <link rel="stylesheet" href="estilos/style_sobre.css">
 </head>
-<body>
-  <h1>💍 ¡Nos casamos! 💍</h1>
-  <p>Diego & Tania</p>
-  <p>08 de Mayo de 2026</p>
-  <p>Prueba de nuestra invitación web ❤️</p>
+<body class="envelope-page">
+  <div class="envelope-container">
+    <div class="envelope">
+      <div class="flap"></div>
+      <div class="letter">
+        <h2>💌 Diego & Tania</h2>
+        <p>Te invitamos a compartir con nosotros este día tan especial...</p>
+      </div>
+    </div>
+    <button id="openButton">Abrir invitación</button>
+  </div>
+
+  <audio id="music" src="music.mp3" preload="auto"></audio>
+
+  <script src="scripts/sobre.js"></script>
 </body>
 </html>
