@@ -1,97 +1,97 @@
-/* Fuente base y reset */
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/letras/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Silenter';
+  src: url('/letras/silenter/Silenter.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mirage';
+  src: url('/letras/made_mirage/MADE\ Mirage\ Medium\ PERSONAL\ USE.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  font-family: 'Raleway', sans-serif;
-  background-color: #fffaf5;
-  color: #333;
-  text-align: center;
+html, body {
+  height: 100%;
+  width: 100%;
   overflow-x: hidden;
 }
-
-/* Sección principal con imagen de fondo */
 .hero {
   position: relative;
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1529634899535-1d46a1d62b25?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  height: 100vh; /* ocupa toda la pantalla */
+  width: 100%;
+  background: url("/img/DPJ01323.jpeg") center/cover no-repeat;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   color: white;
+  overflow: hidden;
 }
 
-.overlay {
+/* Capa sutil para mejorar contraste del texto */
+.hero .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
-  padding: 20px;
+  z-index: 2;
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.8s ease forwards;
+  animation-delay: 0.5s; /* espera medio segundo antes de iniciar */
 }
 
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3em;
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content h1 {
+  font-family: "Silenter", sans-serif;
+  font-size: 5rem;
   letter-spacing: 1px;
+  font-weight: 500;
+  padding-bottom: 0.1rem;
 }
 
-.hero p {
-  font-size: 1.2em;
-  margin-top: 10px;
+.hero-content p {
+  font-family: "Mirage", serif;
+  font-size: 2rem;
+  font-weight: 300;
+    margin-top: 0px;
 }
 
-.date {
-  font-size: 1.1em;
-  margin-top: 10px;
-}
-
-/* Detalles del evento */
-.details {
-  padding: 40px 20px;
-}
-
-.details h2 {
-  font-family: 'Playfair Display', serif;
-  color: #b9806b;
-  margin-bottom: 15px;
-}
-
-/* Footer */
-footer {
-  background-color: #b9806b;
-  color: white;
-  padding: 15px;
-  font-size: 0.9em;
-}
-
-/* 📱 Ajustes Responsive */
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2em;
+  .hero-content h1 {
+    font-size: 2.2rem;
   }
-  .hero p {
-    font-size: 1em;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    height: 90vh;
-  }
-  .hero h1 {
-    font-size: 1.8em;
-  }
-  .hero p {
-    font-size: 0.9em;
+  .hero-content p {
+    font-size: 1rem;
   }
 }

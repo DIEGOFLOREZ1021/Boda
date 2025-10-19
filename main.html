@@ -1,29 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Invitación de Boda | Diego & Tania</title>
-  <link rel="stylesheet" href="estilos/style_main.css">
+  <link rel="stylesheet" href="estilos/style_main.css" />
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Diego & Tania</h1>
-      <p>💍 ¡Nos casamos! 💍</p>
-      <p class="date">08 de Mayo de 2026</p>
-    </div>
-  </header>
 
-  <section class="details">
-    <h2>Detalles del evento</h2>
-    <p>Ceremonia y celebración en <strong>Finca Valquijancho de Araceli</strong></p>
-    <p>Ctra. San Agustín del Guadalix a Colmenar, km 4, 200, 28770 Colmenar Viejo, Madrid</p>
+  <!-- 1️⃣ HERO / PORTADA -->
+<header class="hero" id="inicio">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>DIEGO &amp; TANIA</h1>
+    <p>¡Nos casamos!</p>
+  </div>
+</header>
+
+
+  <!-- 2️⃣ NUESTRA HISTORIA -->
+  <section id="historia" class="section historia">
+    <h2>Nuestra historia</h2>
+    <p>Nos conocimos hace algunos años, y desde entonces, nuestras vidas se unieron en una historia llena de amor, risas y aventuras...</p>
   </section>
 
-  <footer>
-    <p>Con todo nuestro amor 💕</p>
+  <!-- 3️⃣ FOTOS Y VERSÍCULO -->
+  <section id="fotos" class="section fotos">
+    <h2>Momentos especiales</h2>
+    <div class="fotos-grid">
+      <img src="img/foto1.jpg" alt="Foto Diego y Tania 1" />
+      <img src="img/foto2.jpg" alt="Foto Diego y Tania 2" />
+      <img src="img/foto3.jpg" alt="Foto Diego y Tania 3" />
+    </div>
+    <blockquote class="versiculo">
+      “El amor todo lo sufre, todo lo cree, todo lo espera, todo lo soporta.”<br />
+      <span>— 1 Corintios 13:7 💖</span>
+    </blockquote>
+  </section>
+
+  <!-- 4️⃣ ESTÁS INVITADO -->
+  <section id="invitacion" class="section invitacion">
+    <h2>¡Estás invitado!</h2>
+    <p>Te esperamos para celebrar nuestro gran día:</p>
+    <p><strong>15 de marzo de 2025 - 17:00 hs</strong></p>
+  </section>
+
+  <!-- 5️⃣ UBICACIÓN -->
+  <section id="ubicacion" class="section ubicacion">
+    <h2>Ubicación</h2>
+    <p>Jardín Los Álamos<br>Av. Primavera 123, Ciudad Bella</p>
+    <p>
+      <a class="btn-primary" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">
+        Abrir en Google Maps
+      </a>
+    </p>
+  </section>
+
+  <!-- 6️⃣ CUENTA REGRESIVA -->
+  <section id="countdown" class="section countdown">
+    <h2>Cuenta regresiva</h2>
+    <div class="countdown-timers">
+      <div class="time-unit"><span id="days">--</span><small>días</small></div>
+      <div class="time-unit"><span id="hours">--</span><small>horas</small></div>
+      <div class="time-unit"><span id="minutes">--</span><small>minutos</small></div>
+      <div class="time-unit"><span id="seconds">--</span><small>segundos</small></div>
+    </div>
+  </section>
+
+  <!-- 7️⃣ PROGRAMACIÓN DEL DÍA -->
+  <section id="programacion" class="section programacion">
+    <h2>Programación del día</h2>
+    <ul>
+      <li><strong>16:00</strong> - Recepción</li>
+      <li><strong>17:00</strong> - Ceremonia</li>
+      <li><strong>18:30</strong> - Cóctel</li>
+      <li><strong>20:00</strong> - Cena y fiesta 🎉</li>
+    </ul>
+  </section>
+
+  <!-- 8️⃣ LLUVIA DE SOBRES / PAGO -->
+  <section id="sobres" class="section sobres">
+    <h2>Lluvia de sobres 💌</h2>
+    <p>Si deseas tener un detalle con nosotros, puedes hacerlo a través de nuestra lluvia de sobres o colaborar con el cubierto. 💖</p>
+    <p><em>(Próximamente agregaremos los datos de pago)</em></p>
+  </section>
+
+  <!-- 9️⃣ DRESS CODE -->
+  <section id="dresscode" class="section dresscode">
+    <h2>Dress Code</h2>
+    <p>Ellas: Vestido largo (evitar blanco).<br>Ellos: Traje formal.</p>
+  </section>
+
+  <!-- 🔟 SUGERIR CANCIONES -->
+  <section id="canciones" class="section canciones">
+    <h2>¡Ayúdanos con la música!</h2>
+    <p>Queremos que disfrutes al máximo la fiesta. ¿Tienes una canción que no puede faltar?</p>
+    <a href="https://forms.gle/" target="_blank" rel="noopener noreferrer" class="btn-primary">Sugerir canción 🎵</a>
+  </section>
+
+  <!-- 11️⃣ FORMULARIO DE CONFIRMACIÓN -->
+  <section id="confirmacion" class="section confirmacion">
+    <h2>Confirmación de asistencia (RSVP)</h2>
+    <form id="rsvpForm">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label>¿Podrás asistir?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="asistencia" value="sí" checked /> Sí</label>
+        <label><input type="radio" name="asistencia" value="no" /> No</label>
+      </div>
+
+      <label for="mensaje">Mensaje o aclaración</label>
+      <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+
+      <button type="submit" class="btn-primary">Confirmar</button>
+    </form>
+  </section>
+
+  <!-- 12️⃣ MÁS INFO -->
+  <section id="info" class="section info">
+    <h2>¿Necesitás más información?</h2>
+    <p>Escríbenos por WhatsApp para cualquier duda o detalle.</p>
+    <a href="https://wa.me/1234567890" target="_blank" class="btn-whatsapp">📱 Contactar por WhatsApp</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>Con amor, Diego &amp; Tania 💕</p>
+    <small>© 2025 | Todos los derechos reservados</small>
   </footer>
 
   <script src="scripts/script_main.js"></script>
