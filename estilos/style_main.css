@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'Playfair Display';
-  src: url('/letras/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+  src: url('../letras/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Silenter';
-  src: url('/letras/silenter/Silenter.ttf') format('truetype');
+  src: url('../letras/silenter/Silenter.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Mirage';
-  src: url('/letras/made_mirage/MADE\ Mirage\ Medium\ PERSONAL\ USE.otf') format('truetype');
+  src: url('../letras/made_mirage/MADE\ Mirage\ Medium\ PERSONAL\ USE.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -30,7 +30,7 @@ html, body {
   position: relative;
   height: 100vh; /* ocupa toda la pantalla */
   width: 100%;
-  background: url("/img/DPJ01323.jpeg") center/cover no-repeat;
+  background: url("../img/DPJ01323.jpeg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
