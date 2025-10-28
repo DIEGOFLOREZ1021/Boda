@@ -12,7 +12,7 @@
 }
 @font-face {
   font-family: 'Mirage';
-  src: url('../letras/made_mirage/MADE\ Mirage\ Medium\ PERSONAL\ USE.otf') format('truetype');
+  src: url('../letras/made_mirage/MADE-Mirage-Medium.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -25,7 +25,12 @@ html, body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  background-color: #fffaf1;
 }
+/***********************************
+  SECCIÓN HERO
+***********************************/
+
 .hero {
   position: relative;
   height: 100vh; /* ocupa toda la pantalla */
@@ -77,13 +82,15 @@ html, body {
   letter-spacing: 1px;
   font-weight: 500;
   padding-bottom: 0.1rem;
+  color: #fffaf1;
 }
 
 .hero-content p {
   font-family: "Mirage", serif;
   font-size: 2rem;
   font-weight: 300;
-    margin-top: 0px;
+  margin-top: 0px;
+  color: #fffaf1;
 }
 
 /* Ajustes para pantallas pequeñas */
@@ -95,3 +102,117 @@ html, body {
     font-size: 1rem;
   }
 }
+
+/***********************************
+  SECCIÓN NUESTRA HISTORIA
+***********************************/
+
+#historia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; 
+  padding: 2rem 2rem;
+  flex-wrap: wrap;
+}
+
+#historia img {
+  max-width: 1000px; 
+  height: auto;
+}
+
+#historia h2 {
+  font-family: "Silenter", serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: rgb(185, 152, 8);
+  margin-bottom: 1.5rem;
+}
+
+#historia p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-family: "Playfair Display", serif;
+  color: #3b3b3b;
+  max-width: 600px;
+  text-align: left;
+}
+
+/* Responsive (móviles y tablets) */
+@media (max-width: 992px) {
+  #historia {
+    flex-direction: column;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  #historia img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  #historia h2 {
+    font-size: 3.5rem;
+  }
+
+  #historia p {
+    font-size: 1.1rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+@media (min-width: 993px) {
+  #historia {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+/***********************************
+  SECCIÓN FECHA DE LA BODA
+***********************************/
+.sectionFecha {
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.sectionFecha h2 {
+  font-family: "Silenter", serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: rgb(118, 97, 4);
+  margin-bottom: 1rem;
+}
+
+.mensajeFecha {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.fechaBoda {
+  font-family: "Mirage", serif;
+  font-size: 2.2rem;
+  color: #2c2c2c;
+  letter-spacing: 2px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .sectionFecha {
+    padding: 4rem 1.5rem;
+  }
+
+  .sectionFecha h2 {
+    font-size: 2rem;
+  }
+
+  .fechaBoda {
+    font-size: 1.8rem;
+  }
+}
+
+  
+
