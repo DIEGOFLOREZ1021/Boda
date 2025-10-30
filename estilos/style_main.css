@@ -96,10 +96,10 @@ html, body {
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
   .hero-content p {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -109,10 +109,10 @@ html, body {
 
 #historia {
   display: flex;
-  align-items: center;
+  align-items: center;  
   justify-content: center;
   gap: 2rem; 
-  padding: 2rem 2rem;
+  padding: 2rem 2rem 0 1rem;
   flex-wrap: wrap;
   overflow-x: hidden;
 }
@@ -134,7 +134,7 @@ html, body {
   font-size: 1.3rem;
   font-weight: 300;
   font-family: "Playfair Display", serif;
-  color: #3b3b3b;
+  color: #394846;
   max-width: 600px;
   text-align: left;
 }
@@ -180,10 +180,11 @@ html, body {
 ***********************************/
 .sectionFecha {
   padding: 2rem 2rem;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
 }
 .sectionFecha #imgAnillos {
   width: 300px;
@@ -216,7 +217,155 @@ html, body {
   height: auto;
 }
 }
+/***********************************
+  SECCIÓN UBICACIÓN
+***********************************/
+.sectionUbicacion {
+  width: 700px;
+  text-align: center;
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f1e4;
+  border-radius: 8px;
+  margin: 0px auto 2rem auto ;
+  margin-top: 4rem;
+}
 
+.sectionUbicacion #titulo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#titulo img{
+  width: 50px;
+  height: auto;
+}
+
+.sectionUbicacion h2 {
+  font-family: "Silenter", serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #b99808;
+}
+
+.sectionUbicacion #nombreLugar {
+  font-family: "Mirage", serif;
+  font-size: 2rem;
+  color: #b99808;
+  margin-bottom: 0.5rem;
+}
+
+.sectionUbicacion #direccion {
+  width: 80%;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: #394846;
+  margin-bottom: 2rem;
+}
+
+.btnMapa {
+  display: inline-block;
+  background-color: #b99808;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.btnMapa:hover {
+  background-color: #c4a94d;
+  transform: scale(1.03);
+}
+
+/* 📱 Responsive */
+@media (max-width: 800px) {
+  .sectionUbicacion {
+    width: 400px;
+  }
+
+  #titulo img{
+    width: 30px;
+    height: auto;
+  }
+
+  .sectionUbicacion h2 {
+    font-size: 2.2rem;
+  }
+
+  .sectionUbicacion #nombreLugar {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .sectionUbicacion #direccion {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .btnMapa {
+    font-size: 0.9rem;
+  }
+}
+/***********************************
+  SECCIÓN PALABRA RHEMA
+***********************************/
+.sectionRhema {
+  padding: 2rem 2rem;
+  justify-content: center;
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.sectionRhema img{
+  display: block;
+  margin: 0 auto 1rem auto;
+  width: 100px;
+  height: auto;
+}
+
+.sectionRhema p {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #394846;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.sectionRhema span {
+  font-family: "Silenter", serif;
+  font-size: 1.5rem;
+  color: #b99808;
+  float: right;
+}
+
+@media (max-width: 800px) {
+  .sectionRhema {
+    width: 400px;
+  }
+
+  .sectionRhema img{
+    width: 90px;
+  }
+
+  .sectionRhema p {
+    font-size: 1rem;
+  }
+
+  .sectionRhema span {
+    font-size: 1rem;
+  }
+}
 
 
 
