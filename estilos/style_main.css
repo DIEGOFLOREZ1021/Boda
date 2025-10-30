@@ -114,10 +114,11 @@ html, body {
   gap: 2rem; 
   padding: 2rem 2rem;
   flex-wrap: wrap;
+  overflow-x: hidden;
 }
 
 #historia img {
-  max-width: 1000px; 
+  max-width: 500px; 
   height: auto;
 }
 
@@ -139,30 +140,35 @@ html, body {
 }
 
 /* Responsive (móviles y tablets) */
-@media (max-width: 992px) {
+@media (max-width: 800px) {
   #historia {
     flex-direction: column;
-    padding: 3rem 2rem;
+    padding: 0 0 0 0;
+    margin-left: 0;
+    gap: 0;
     text-align: center;
   }
 
   #historia img {
-    width: 90%;
-    height: auto;
-    margin-bottom: 2rem;
+    max-width: 100%;
+    margin: 0 0 0 0;
   }
 
-  #historia h2 {
+   #historia h2 {
     font-size: 3.5rem;
+    margin: 0 auto;
   }
 
   #historia p {
-    font-size: 1.1rem;
-    margin: 0 auto;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    padding: 0 2rem 2rem 2rem;
     text-align: center;
   }
 }
-@media (min-width: 993px) {
+
+
+@media (min-width: 800px) {
   #historia {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -173,46 +179,48 @@ html, body {
   SECCIÓN FECHA DE LA BODA
 ***********************************/
 .sectionFecha {
-  text-align: center;
-  padding: 6rem 2rem;
+  padding: 2rem 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.sectionFecha #imgAnillos {
+  width: 300px;
+  height: auto;
+  margin-bottom: 2rem;
 }
 
-.sectionFecha h2 {
-  font-family: "Silenter", serif;
-  font-size: 2.5rem;
-  font-weight: 300;
-  color: rgb(118, 97, 4);
-  margin-bottom: 1rem;
-}
-
-.mensajeFecha {
-  font-family: "Playfair Display", serif;
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 1.5rem;
-}
-
-.fechaBoda {
-  font-family: "Mirage", serif;
-  font-size: 2.2rem;
-  color: #2c2c2c;
-  letter-spacing: 2px;
+.sectionFecha #imgFecha {
+  width: 60%;
+  height: auto;
 }
 
 /* Responsivo */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .sectionFecha {
-    padding: 4rem 1.5rem;
+    padding: 2rem 1rem 2rem 1rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 
-  .sectionFecha h2 {
-    font-size: 2rem;
+  .sectionFecha #imgAnillos {
+  width: 200px;
+  height: auto;
+  margin-bottom: 2rem;
   }
-
-  .fechaBoda {
-    font-size: 1.8rem;
-  }
+  .sectionFecha #imgFecha {
+  width: 80%;
+  height: auto;
 }
+}
+
+
+
+
+
 
   
 
