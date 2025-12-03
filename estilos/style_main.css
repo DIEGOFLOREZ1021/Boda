@@ -598,6 +598,111 @@ html, body {
   }
 }
 
+/**************************
+SECCION REGALOS Y DRESS CODE
+**************************/
+#sectionRegaloDresscode{
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: flex-start;
+  gap: 2rem;               
+  width: 100%;
+  margin: 3rem auto;
+}
+
+.sectionRegalos{
+  padding: 2rem 2rem;
+  justify-content: center;
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  background-color: #f8f1e4;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sectionRegalos img{
+  display: block;
+  margin: 0 auto 1rem auto;
+  width: 100px;
+  height: auto;
+}
+
+.sectionRegalos h1{
+  font-family: 'Mirage',serif;
+  text-align: center;
+  margin: 0 auto;
+  color: #394846;
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.sectionRegalos p{
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.sectionDresscode{
+  padding: 2rem 2rem;
+  justify-content: center;
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  background-color: #f8f1e4;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sectionDresscode img{
+  display: block;
+  margin: 0 auto 1rem auto;
+  width: 150px;
+  height: auto;
+}
+
+.sectionDresscode h1{
+  font-family: 'Mirage',serif;
+  text-align: center;
+  margin: 0 auto;
+  color: #394846;
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.sectionDresscode p{
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+@media (max-width: 768px){
+
+  #sectionRegaloDresscode{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: 1.5rem;
+  }
+
+  .sectionRegalos,
+  .sectionDresscode{
+    width: 300px; 
+  }
+
+  .sectionRegalos p,
+  .sectionDresscode p{
+    font-size: 1rem; 
+  }
+}
+
 
 
 

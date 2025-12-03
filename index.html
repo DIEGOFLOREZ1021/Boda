@@ -81,7 +81,41 @@
     </div>
   </section>
 
-<!-- 3️⃣ FOTOS / ÁLBUM -->
+  <!-- 7️⃣ PROGRAMACIÓN DEL DÍA -->
+<section id="programacion" class="sectionProgramacion">
+  <h2>Programacion & Horarios</h2>
+  <p class="intro">
+    Recuerda organizarte con tiempo para que no te pierdas ningun momento 
+      de este dia tan especial para nosotros.</p>
+  <div class="timeline">
+    <img>
+  </div>
+</section>
+
+
+  <!-- 8️⃣ LLUVIA DE SOBRES / PAGO --> <!-- 9️⃣ DRESS CODE -->
+  <section id="sectionRegaloDresscode">
+  <div id="sobres" class="sectionRegalos">
+    <img src="./img/regalos.svg" alt="imgRegalo">
+    <h1>Lluvia de sobres</h1>
+    <p>Tu compañía en este día es el regalo más valioso.
+        Si deseas acompañarlo con un detalle especial,
+        puedes hacerlo a través de lluvia de sobres.
+        Cada gesto será recibido con mucho cariño y gratitud.</p>
+    </div>
+
+  <!-- 9️⃣ DRESS CODE -->
+  <div id="dresscode" class="sectionDresscode">
+    <img src="./img/dresscodeee.svg" alt="img_dressCode">
+    <h1>Dress Code</h1>
+    <p><strong>Hombres:</strong> traje formal y elegante.<br>
+        <strong>Mujeres:</strong> vestidos largos y sofisticados.<br>
+        No se deberán usar los colores blanco, beige ni dorado.
+        Se agradece su puntualidad para disfrutar juntos cada momento de este día tan especial.</p>
+  </div>
+  </section>
+
+  <!-- 3️⃣ FOTOS / ÁLBUM -->
 <section id="fotos" class="sectionFotos">
   <h2>Momentos Especiales</h2>
   <div class="album-container">
@@ -111,34 +145,25 @@
     <div class="swipe-hint">Desliza -></div>
   </div>
 </section>
+  <!-- 11️⃣ FORMULARIO DE CONFIRMACIÓN -->
+    <section id="confirmacion" class="section confirmacion">
+      <h2>Confirmación de asistencia (RSVP)</h2>
+      <form id="rsvpForm">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required />
 
-  <!-- 7️⃣ PROGRAMACIÓN DEL DÍA -->
-<section id="programacion" class="sectionProgramacion">
-  <h2>Programacion & Horarios</h2>
-  <p class="intro">
-    Recuerda organizarte con tiempo para que no te pierdas ningun momento 
-      de este dia tan especial para nosotros.</p>
-  <div class="timeline">
-    <img>
-  </div>
-</section>
+        <label>¿Podrás asistir?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="asistencia" value="sí" checked /> Sí</label>
+          <label><input type="radio" name="asistencia" value="no" /> No</label>
+        </div>
 
+        <label for="mensaje">Mensaje o aclaración</label>
+        <textarea id="mensaje" name="mensaje" rows="3"></textarea>
 
-  <!-- 8️⃣ LLUVIA DE SOBRES / PAGO -->
-  <section id="sobres" class="section sobres">
-    <h2>Lluvia de sobres 💌</h2>
-    <p>Tu compañía en este día es el regalo más valioso.
-        Si deseas acompañarlo con un detalle especial,
-        puedes hacerlo a través de lluvia de sobres.
-        Cada gesto será recibido con mucho cariño y gratitud.</p>
-    <p><em>(Próximamente agregaremos los datos de pago)</em></p>
-  </section>
-
-  <!-- 9️⃣ DRESS CODE -->
-  <section id="dresscode" class="section dresscode">
-    <h2>Dress Code</h2>
-    <p>Ellas: Vestido largo (evitar blanco).<br>Ellos: Traje formal.</p>
-  </section>
+        <button type="submit" class="btn-primary">Confirmar</button>
+      </form>
+    </section>
 
   <!-- 🔟 SUGERIR CANCIONES -->
   <section id="canciones" class="section canciones">
@@ -147,26 +172,7 @@
     <a href="https://forms.gle/" target="_blank" rel="noopener noreferrer" class="btn-primary">Sugerir canción 🎵</a>
   </section>
 
-  <!-- 11️⃣ FORMULARIO DE CONFIRMACIÓN -->
-  <section id="confirmacion" class="section confirmacion">
-    <h2>Confirmación de asistencia (RSVP)</h2>
-    <form id="rsvpForm">
-      <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" name="nombre" required />
-
-      <label>¿Podrás asistir?</label>
-      <div class="radio-group">
-        <label><input type="radio" name="asistencia" value="sí" checked /> Sí</label>
-        <label><input type="radio" name="asistencia" value="no" /> No</label>
-      </div>
-
-      <label for="mensaje">Mensaje o aclaración</label>
-      <textarea id="mensaje" name="mensaje" rows="3"></textarea>
-
-      <button type="submit" class="btn-primary">Confirmar</button>
-    </form>
-  </section>
-
+  
   <!-- 12️⃣ MÁS INFO -->
   <section id="info" class="section info">
     <h2>¿Necesitás más información?</h2>
