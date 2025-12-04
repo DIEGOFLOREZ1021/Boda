@@ -116,6 +116,7 @@
   </section>
 
   <!-- 3️⃣ FOTOS / ÁLBUM -->
+<div id="sectionFotosFormulario">
 <section id="fotos" class="sectionFotos">
   <h2>Momentos Especiales</h2>
   <div class="album-container">
@@ -147,29 +148,60 @@
 </section>
   <!-- 11️⃣ FORMULARIO DE CONFIRMACIÓN -->
     <section id="confirmacion" class="section confirmacion">
-      <h2>Confirmación de asistencia (RSVP)</h2>
-      <form id="rsvpForm">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" required />
+  <h2>Confirma tu asistencia</h2>
+  <p>Rellena el siguiente formulario individualmente por cada persona que asistirá a la ceremonia.</p>
+    <form id="rsvpForm">
+    <label for="nombre"></label>
+    <input 
+      type="text" 
+      id="nombre" 
+      name="nombre" 
+      placeholder="Nombre y apellidos *"
+      required 
+    />
 
-        <label>¿Podrás asistir?</label>
-        <div class="radio-group">
-          <label><input type="radio" name="asistencia" value="sí" checked /> Sí</label>
-          <label><input type="radio" name="asistencia" value="no" /> No</label>
-        </div>
+    <label for="telefono"></label>
+    <input 
+      type="tel" 
+      id="telefono" 
+      name="telefono" 
+      placeholder="Número telefónico *"
+      required 
+    />
 
-        <label for="mensaje">Mensaje o aclaración</label>
-        <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+    <label for="asistencia"></label>
+    <select id="asistencia" name="asistencia" required>
+      <option value="">¿Podrás asistir? *</option>
+      <option value="si">Sí asistiré</option>
+      <option value="no">No podré asistir, lo siento...</option>
+    </select>
 
-        <button type="submit" class="btn-primary">Confirmar</button>
-      </form>
-    </section>
+
+    <label for="alergias"></label>
+    <textarea 
+      id="alergias" 
+      name="alergias" 
+      rows="3" 
+      placeholder="Indica si tienes alguna alergia o dieta especial *"
+      required
+    ></textarea>
+    <label for="mensaje"></label>
+    <textarea 
+      id="mensaje" 
+      name="mensaje" 
+      rows="3" 
+      placeholder="Mensaje para los novios (opcional)"
+    ></textarea>
+    <button type="submit" class="btn-enviar">Enviar</button>
+  </form>
+</section>
+</div>
 
   <!-- 🔟 SUGERIR CANCIONES -->
   <section id="canciones" class="section canciones">
     <h2>¡Ayúdanos con la música!</h2>
     <p>Queremos que disfrutes al máximo la fiesta. ¿Tienes una canción que no puede faltar?</p>
-    <a href="https://forms.gle/" target="_blank" rel="noopener noreferrer" class="btn-primary">Sugerir canción 🎵</a>
+    <a href="https://forms.gle/" target="_blank" rel="noopener noreferrer" class="btnCancio">Sugerir canción 🎵</a>
   </section>
 
   
@@ -187,5 +219,19 @@
   </footer>
 
   <script src="scripts/script_main.js"></script>
+
+  <!-- LOADER -->
+<div id="loader" class="loader-overlay" style="display:none;">
+  <div class="spinner"></div>
+</div>
+
+<!-- MENSAJE BONITO -->
+<div id="successMessage" class="success-message" style="display:none;">
+  <div class="success-card">
+    <h3>¡Gracias por confirmar!</h3>
+    <p>Tu respuesta ha sido registrada correctamente.</p>
+    <button id="closeMessage" type="button">Cerrar</button>
+  </div>
+</div>
 </body>
 </html>

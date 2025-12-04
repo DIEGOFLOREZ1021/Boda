@@ -49,4 +49,84 @@ if (album && hint) {
   });
 }
 
+/********************************************************************************** */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("rsvpForm");
+  const btn = document.querySelector(".btn-enviar");
+  const loader = document.getElementById("loader");
+  const successMessage = document.getElementById("successMessage");
+  const closeBtn = document.getElementById("closeMessage");
+
+  // Función para mostrar / ocultar loader y estado del botón
+  function setSending(isSending) {
+    if (btn) {
+      btn.disabled = isSending;
+      btn.style.opacity = isSending ? "0.6" : "1";
+    }
+    if (loader) loader.style.display = isSending ? "flex" : "none";
+  }
+
+  // Manejo del submit (si ya lo tienes, sustituye por esto)
+  if (form) {
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      setSending(true);
+
+      const data = {
+        nombre: document.getElementById("nombre").value,
+        telefono: document.getElementById("telefono").value,
+        asistencia: document.getElementById("asistencia").value,
+        alergias: document.getElementById("alergias").value,
+        mensaje: document.getElementById("mensaje").value
+      };
+
+      try {
+        await fetch("https://script.google.com/macros/s/AKfycbyJ8eoefs3p0yVSto-SNi2z558GRxwdfpXVj5KmULVDwquEMTzQrlp4J0WQIvV8_rTy/exec", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+          mode: "no-cors"
+        });
+
+        // Mostrar mensaje bonito
+        if (successMessage) {
+          successMessage.style.display = "flex";
+          // opcional: mover foco al botón cerrar para accesibilidad
+          if (closeBtn) closeBtn.focus();
+        }
+
+        form.reset();
+
+      } catch (err) {
+        console.error(err);
+        alert("Error al enviar el formulario. Inténtalo de nuevo.");
+      } finally {
+        setSending(false);
+      }
+    });
+  }
+
+  // Cerrar con botón
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function (ev) {
+      ev.stopPropagation();
+      if (successMessage) successMessage.style.display = "none";
+    });
+  }
+
+  // Cerrar tocando fuera de la tarjeta
+  if (successMessage) {
+    successMessage.addEventListener("click", function (ev) {
+      // si el clic fue en el overlay (no dentro de .success-card), cerrar
+      if (ev.target === successMessage) {
+        successMessage.style.display = "none";
+      }
+    });
+  }
+});
+
+
+
+
 

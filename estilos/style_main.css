@@ -449,96 +449,6 @@ html, body {
 }
 
 /***********************************
-  SECCIÓN FOTOS / ÁLBUM
-***********************************/
-.sectionFotos {
-  text-align: center;
-  padding: 1rem 1rem;
-  background-color: #50645b;
-  border-radius: 30px;
-}
-
-.sectionFotos h2 {
-  font-family: "Playfair Dispaly", serif;
-  font-size: 2rem;
-  color: white;
-  margin-bottom: 2rem;
-  font-weight: 400;
-}
-
-/* Contenedor principal */
-.album-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Contenedor de las fotos */
-.album {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none; /* Oculta scroll en Firefox */
-  -ms-overflow-style: none; /* Oculta scroll en IE */
-}
-.album::-webkit-scrollbar {
-  display: none; /* Oculta scroll en Chrome/Safari */
-}
-
-/* Cada foto */
-.album img {
-  width: 50%;
-  max-width: 700px;
-  height: auto;
-  border-radius: 12px;
-  scroll-snap-align: center;
-  flex-shrink: 0;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
-}
-
-.album img:hover {
-  transform: scale(1.03);
-}
-
-/* Indicador de deslizamiento */
-.swipe-hint {
-  position:absolute;
-  top: 10px;
-  right: 100px;
-  width: 100%;
-  text-align: right;
-  font-family: "Playfair Display", serif;
-  color: white;
-  font-size: 1rem;
-  opacity: 0.8;
-  animation: hintMove 1.8s ease-in-out infinite alternate;
-}
-
-@keyframes hintMove {
-  0% { transform: translateX(-10px); }
-  100% { transform: translateX(10px); }
-}
-
-@media (max-width: 768px) {
-  .sectionFotos h2 {
-    font-size: 2.2rem;
-  }
-
-  .album img {
-    width: 85%;
-    border-radius: 10px;
-  }
-
-  .swipe-hint {
-    font-size: 0.9rem;
-  }
-}
-
-/***********************************
   SECCIÓN PROGRAMACIÓN DEL DÍA
 ***********************************/
 .sectionProgramacion {
@@ -576,11 +486,6 @@ html, body {
   border-radius: 12px;
 }
 
-/***************
-  Responsivo
-****************/
-
-/* 📱 Móviles */
 @media (max-width: 768px) {
 
   .sectionProgramacion h2 {
@@ -702,6 +607,295 @@ SECCION REGALOS Y DRESS CODE
     font-size: 1rem; 
   }
 }
+
+/***********************************
+  SECCIÓN FOTOS / ÁLBUM
+***********************************/
+
+#sectionFotosFormulario{
+  background-color: #50645b;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 1rem;
+}
+.sectionFotos {
+  text-align: center;
+  padding: 1rem 1rem;
+}
+
+.sectionFotos h2 {
+  font-family: "Playfair Dispaly", serif;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+/* Contenedor principal */
+.album-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Contenedor de las fotos */
+.album {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Oculta scroll en Firefox */
+  -ms-overflow-style: none; /* Oculta scroll en IE */
+}
+.album::-webkit-scrollbar {
+  display: none; /* Oculta scroll en Chrome/Safari */
+}
+
+/* Cada foto */
+.album img {
+  width: 50%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 12px;
+  scroll-snap-align: center;
+  flex-shrink: 0;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.album img:hover {
+  transform: scale(1.03);
+}
+
+/* Indicador de deslizamiento */
+.swipe-hint {
+  position:absolute;
+  top: 10px;
+  right: 100px;
+  width: 100%;
+  text-align: right;
+  font-family: "Playfair Display", serif;
+  color: white;
+  font-size: 1rem;
+  opacity: 0.8;
+  animation: hintMove 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes hintMove {
+  0% { transform: translateX(-10px); }
+  100% { transform: translateX(10px); }
+}
+
+@media (max-width: 768px) {
+  .sectionFotos h2 {
+    font-size: 2.2rem;
+  }
+
+  .album img {
+    width: 85%;
+    border-radius: 10px;
+  }
+
+  .swipe-hint {
+    font-size: 0.9rem;
+  }
+}
+
+/*********************************
+SECCION FORMULARIO ASISTENCIA
+***********************************/
+
+/* FORMULARIO */
+.confirmacion {
+  width: 90%;
+  max-width: 700px;
+  margin: 0.5rem auto;
+  padding: 0;
+}
+
+.confirmacion h2 {
+  font-family: "Silenter", serif;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.confirmacion p{
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 0;
+  text-align: center;
+  color: white;
+}
+
+#rsvpForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Etiquetas */
+#rsvpForm label {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  color: #b99808;
+  font-weight: 500;
+}
+
+/* Inputs y selects */
+#rsvpForm input,
+#rsvpForm select,
+#rsvpForm textarea {
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  font-family: "Playfair Display", serif;
+  border: 1px solid #c9b99a;
+  border-radius: 6px;
+  background-color: #fffaf1;
+  outline: none;
+  transition: 0.3s;
+}
+
+#rsvpForm input:focus,
+#rsvpForm select:focus,
+#rsvpForm textarea:focus {
+  border-color: #b99808;
+  box-shadow: 0 0 5px rgba(185, 152, 8, 0.3);
+}
+
+/* Botón */
+.btn-enviar {
+  background-color: #b99808;
+  width: 200px;
+  margin: 0 auto;
+  color: white;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-family: "Mirage", serif;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn-enviar:hover {
+  background-color: #c4a94d;
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .confirmacion {
+    padding: 1.5rem;
+  }
+
+  .confirmacion h2 {
+    font-size: 2.4rem;
+  }
+  .confirmacion p{
+    font-size: 1rem;
+  }
+
+  #rsvpForm label {
+    font-size: 1.1rem;
+  }
+}
+/******************************************
+LOADER Y TARJETA DE EXITO
+********************************/
+/* ===== LOADER ===== */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 250, 241, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.spinner {
+  border: 4px solid #e0d6c6;
+  border-top: 4px solid #b99808;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===== MENSAJE DE ÉXITO ===== */
+.success-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9998;
+}
+
+.success-card {
+  background: #fffaf1;
+  padding: 2rem;
+  width: 85%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  animation: fadeIn 0.4s ease;
+  border: 1px solid #e8dcc4;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.success-card h3 {
+  font-family: "Silenter", serif;
+  font-size: 2rem;
+  color: #b99808;
+  font-weight: lighter;
+}
+
+.success-card p {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #394846;
+}
+
+#closeMessage {
+  padding: 0.7rem 1.4rem;
+  font-family: "Playfair Display", serif;
+  background-color: #b99808;
+  color: #fffaf1;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#closeMessage:hover {
+  background-color: #c8ad46;
+}
+
+
+
 
 
 
