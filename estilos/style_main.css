@@ -103,6 +103,26 @@ html, body {
   }
 }
 
+#contenedor{
+  min-height: 400rem;
+  background-image: 
+    url("../img/imgFondo.png"),
+    url("../img/imgFondoDcha.png");
+  background-repeat: repeat-y, repeat-y;
+  background-position: left top, right top;
+  background-size: 380px auto, 380px auto;
+}
+
+@media (max-width: 768px){
+  #contenedor{
+    background-image: 
+    url("../img/imgFondoIzqMovil.png"),
+    url("../img/imgFondoDchaMovil.png");
+    background-size: 150px auto, 150px auto;
+  }
+}
+
+
 /***********************************
   SECCIÓN NUESTRA HISTORIA
 ***********************************/
@@ -375,7 +395,6 @@ html, body {
 .section.countdown {
   text-align: center;
   padding: 4rem 1rem;
-  background-color: #fffaf1;
   color: #394846;
 }
 
@@ -461,6 +480,7 @@ html, body {
   font-size: 3rem;
   font-weight: lighter;
   color: #b99808;
+  line-height:40px;
 }
 
 .sectionProgramacion .intro {
@@ -469,12 +489,12 @@ html, body {
   color: #394846;
   max-width: 600px;
   margin: 0 auto;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 /* Timeline contenedor */
 .timeline{
-  width: 80%;
+  width: 90%;
   max-width: 900px;
   height: 500px; /* Ajusta según el diseño */
   margin: 0 auto;
@@ -484,6 +504,9 @@ html, body {
   background-position: center;  
   background-repeat: no-repeat;
   border-radius: 12px;
+  background-color: #f8f1e4;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
@@ -794,7 +817,7 @@ SECCION FORMULARIO ASISTENCIA
   }
 
   .confirmacion h2 {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
   }
   .confirmacion p{
     font-size: 1rem;
@@ -1085,6 +1108,32 @@ SECTION FINAL
   text-align: center;
   font-size: 1.2rem;
 }
+
+.btn-musica {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #c4a94d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  backdrop-filter: blur(3px);
+  transition: 0.3s ease;
+  z-index: 9999;
+}
+
+.btn-musica:hover {
+  transform: scale(1.08);
+}
+
 
 
 

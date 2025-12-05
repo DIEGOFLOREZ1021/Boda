@@ -126,7 +126,30 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+/****************************************************************************/
 
+const audio = document.getElementById("musicaFondo");
+const btnMusica = document.getElementById("btnMusica");
 
+audio.volume = 0.2;
 
+function iniciarSonido() {
+  audio.muted = false;
+  audio.play().then(() => {
+    console.log("Sonido activado");
+  }).catch(err => {
+    console.warn("Bloqueado todavía:", err);
+  });
+}
 
+["click", "touchstart", "scroll", "keydown", "pointerdown"].forEach(evt => {
+  document.addEventListener(evt, iniciarSonido, { once: true });
+});
+
+btnMusica.addEventListener("click", () => {
+  if (audio.paused) {
+    iniciarSonido();
+  } else {
+    audio.pause();
+  }
+});

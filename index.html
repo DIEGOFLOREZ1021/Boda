@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Invitación de Boda | Diego & Tania</title>
   <link rel="stylesheet" href="estilos/style_main.css" />
+  <link rel="icon" type="image/x-icon" href="./img/imgDyT.png">
 </head>
 <body>
 
@@ -16,7 +17,7 @@
     <p>¡Nos casamos!</p>
   </div>
 </header>
-
+<div id="contenedor">
   <!-- 4️⃣ FECHA DE LA BODA -->
   <section id="fechaBoda" class="sectionFecha">
     <img id="imgAnillos" src="./img/anillos1.png" alt="imgAnillos" />
@@ -233,14 +234,14 @@
     <small>Desarrollado y diseñado por Diego Florez | © 2025 | Todos los derechos reservados</small>
   </footer>
 
-  <script src="scripts/script_main.js"></script>
-
   <!-- LOADER -->
 <div id="loader" class="loader-overlay" style="display:none;">
   <div class="spinner"></div>
 </div>
 
 <!-- MENSAJE BONITO -->
+
+</div>
 <div id="successMessage" class="success-message" style="display:none;">
   <div class="success-card">
     <h3>¡Gracias por confirmar!</h3>
@@ -248,5 +249,14 @@
     <button id="closeMessage" type="button">Cerrar</button>
   </div>
 </div>
+
+<!-- MUSICA FONDO -->
+<audio id="musicaFondo" autoplay muted loop>
+  <source src="./audio/ItsAlwaysBeenYou.mp3" type="audio/mpeg">
+</audio>
+
+<button id="btnMusica" class="btn-musica"><img src="/img/imgSonido.png" width="20px"></button>
+
+<script src="scripts/script_main.js"></script>
 </body>
 </html>
